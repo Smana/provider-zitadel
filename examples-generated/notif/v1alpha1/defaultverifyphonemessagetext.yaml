@@ -1,0 +1,12 @@
+apiVersion: notif.zitadel.crossplane.io/v1alpha1
+kind: DefaultVerifyPhoneMessageText
+metadata:
+  annotations:
+    meta.upbound.io/example-id: notif/v1alpha1/defaultverifyphonemessagetext
+  labels:
+    testing.upbound.io/example-name: default
+  name: default
+spec:
+  forProvider:
+    language: en
+    text: text example

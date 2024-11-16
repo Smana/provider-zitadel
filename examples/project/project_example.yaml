@@ -1,0 +1,13 @@
+apiVersion: project.zitadel.crossplane.io/v1alpha1
+kind: Project
+metadata:
+  name: hello-crossplane
+spec:
+  forProvider:
+    hasProjectCheck: true
+    name: crossplane
+    orgIdRef:
+      name: ZITADEL
+    privateLabelingSetting: PRIVATE_LABELING_SETTING_ENFORCE_PROJECT_RESOURCE_OWNER_POLICY
+    projectRoleAssertion: true
+    projectRoleCheck: true
