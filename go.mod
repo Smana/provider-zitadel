@@ -1,4 +1,4 @@
-module github.com/upbound/upjet-provider-template
+module github.com/Smana/provider-zitadel
 
 go 1.21
 

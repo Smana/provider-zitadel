@@ -10,15 +10,35 @@ package apis
 import (
 	"k8s.io/apimachinery/pkg/runtime"
 
-	v1alpha1 "github.com/upbound/upjet-provider-template/apis/null/v1alpha1"
-	v1alpha1apis "github.com/upbound/upjet-provider-template/apis/v1alpha1"
-	v1beta1 "github.com/upbound/upjet-provider-template/apis/v1beta1"
+	v1alpha1 "github.com/Smana/provider-zitadel/apis/action/v1alpha1"
+	v1alpha1app "github.com/Smana/provider-zitadel/apis/app/v1alpha1"
+	v1alpha1default "github.com/Smana/provider-zitadel/apis/default/v1alpha1"
+	v1alpha1idp "github.com/Smana/provider-zitadel/apis/idp/v1alpha1"
+	v1alpha1machine "github.com/Smana/provider-zitadel/apis/machine/v1alpha1"
+	v1alpha1notif "github.com/Smana/provider-zitadel/apis/notif/v1alpha1"
+	v1alpha1org "github.com/Smana/provider-zitadel/apis/org/v1alpha1"
+	v1alpha1password "github.com/Smana/provider-zitadel/apis/password/v1alpha1"
+	v1alpha1policy "github.com/Smana/provider-zitadel/apis/policy/v1alpha1"
+	v1alpha1project "github.com/Smana/provider-zitadel/apis/project/v1alpha1"
+	v1alpha1user "github.com/Smana/provider-zitadel/apis/user/v1alpha1"
+	v1alpha1apis "github.com/Smana/provider-zitadel/apis/v1alpha1"
+	v1beta1 "github.com/Smana/provider-zitadel/apis/v1beta1"
 )
 
 func init() {
 	// Register the types with the Scheme so the components can map objects to GroupVersionKinds and back
 	AddToSchemes = append(AddToSchemes,
 		v1alpha1.SchemeBuilder.AddToScheme,
+		v1alpha1app.SchemeBuilder.AddToScheme,
+		v1alpha1default.SchemeBuilder.AddToScheme,
+		v1alpha1idp.SchemeBuilder.AddToScheme,
+		v1alpha1machine.SchemeBuilder.AddToScheme,
+		v1alpha1notif.SchemeBuilder.AddToScheme,
+		v1alpha1org.SchemeBuilder.AddToScheme,
+		v1alpha1password.SchemeBuilder.AddToScheme,
+		v1alpha1policy.SchemeBuilder.AddToScheme,
+		v1alpha1project.SchemeBuilder.AddToScheme,
+		v1alpha1user.SchemeBuilder.AddToScheme,
 		v1alpha1apis.SchemeBuilder.AddToScheme,
 		v1beta1.SchemeBuilder.AddToScheme,
 	)
